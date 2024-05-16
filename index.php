@@ -20,7 +20,9 @@ if(isset($_POST['lang']) && htmlentities($_POST['lang'])=='en'){
     $textHeader = 'Ballroom skating system calculation';
     $textResetButton = 'Reset';
     $textParticipants = 'Participants';
+    $textParticipantsPlaceholder = 'Participant 1&#10;Participant 2&#10;Participant 3';
     $textJudges = 'Judges';
+    $textJudgesPlaceholder = 'Judge 1&#10;Judge 2&#10;Judge 3';
     $textRefreshTableOfResultsButton = 'Refresh table of results';
     $textResultsHeader = 'Participant/Judge';
     $textCalculateButton = 'Calculate';
@@ -31,7 +33,9 @@ else {
     $textHeader = 'Расчет результатов соревнований по системе Skating';
     $textResetButton = 'Сбросить';
     $textParticipants = 'Участники';
+    $textParticipantsPlaceholder = 'Участник 1&#10;Участник 2&#10;Участник 3';
     $textJudges = 'Судьи';
+    $textJudgesPlaceholder = 'Судья 1&#10;Судья 2&#10;Судья 3';
     $textRefreshTableOfResultsButton = 'Обновить таблицу оценок';
     $textResultsHeader = 'Участник/Судья';
     $textCalculateButton = 'Рассчитать';
@@ -52,11 +56,13 @@ else {
     <input type = "text" name = "lang" value ="<?php echo $textLang?>" hidden>
     <table><tr><th>
                 <label for="participants"><?php echo $textParticipants?>:</label><br>
-                <textarea tabindex="1" id="participants" name="participants" rows="8" cols="30"><?php if( isset( $_POST['participants'] ) ) {
+                <textarea tabindex="1" id="participants" name="participants" placeholder="<?php echo $textParticipantsPlaceholder?>"
+                          rows="8" cols="30"><?php if( isset( $_POST['participants'] ) ) {
                     echo trim(htmlentities($_POST['participants']));} ?></textarea>
     </th><th>
                 <label for="judges"><?php echo $textJudges?>:</label><br>
-                <textarea tabindex="2" id="judges" name="judges" rows="8" cols = "30"><?php if( isset( $_POST['judges'] ) ) {
+                <textarea tabindex="2" id="judges" name="judges" placeholder="<?php echo $textJudgesPlaceholder?>"
+                          rows="8" cols = "30"><?php if( isset( $_POST['judges'] ) ) {
                     echo trim(htmlentities($_POST['judges']));} ?></textarea>
     </th></tr></table>
     <p><input type="submit" class="btn" name="refreshPlaces" value="<?php echo $textRefreshTableOfResultsButton?>"></p>
