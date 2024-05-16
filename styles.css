@@ -1,0 +1,86 @@
+table.bordered, table.bordered tr, table.bordered td, table.bordered th {
+    padding: 2px;
+    border-spacing: 1px;
+    border: 1px solid black;
+    border-collapse: separate;
+}
+table.bordered td.centered,table.bordered th.centered {
+    min-width: 40px;
+    text-align: center;
+}
+table.bordered th {
+    background-color: #d5e6a2;
+}
+table.bordered td:first-child {
+    font-weight: bold;
+}
+
+table.bordered td[rel="resFinal"] {
+    background-color: bisque;
+}
+table.bordered tr:hover {
+    background-color: #d5e6a2;
+}
+
+.number {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+}
+.number input[type="number"] {
+    display: block;
+    height: 25px;
+    line-height: 22px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    outline-color: dimgray;
+}
+.number input[type="number"]::-webkit-outer-spin-button,
+.number input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+.number-minus {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #ddd;
+    font-size: 12px;
+    //font-weight: 600;
+}
+.number-plus {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 20px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    font-size: 12px;
+    //font-weight: 600;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: .2s linear;
+    background: lightgray;
+    font-size: 14px;
+}
+.btn:hover {
+    box-shadow: 0 0 0 1px white, 0 0 0 2px gray;
+}
