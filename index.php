@@ -203,16 +203,15 @@ else {
                         } else {
                             echo '<td rel="' . $valueKey . '" class="centered">' . $valueData . '</td>';
                         }
-                    echo "</tr>";
+                    echo '</tr>';
                     $num++;
                 }
-                echo "</table>";
+                echo '</table>';
+                echo '<div id="bottom"></div>';
             }
         }
     }
     ?>
-    <br>
-    <div id="bottom"></div>
 </body>
 </html>
 
