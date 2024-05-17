@@ -3,3 +3,6 @@ This is a single PHP WEB page representing counting scores in the finals of ball
 Works with PHP 7.0 or higher. 
 
 For using place files 'index.php', 'calculation.php' and 'styles.css' in one folder on your WEB server and run 'index.php'.
+
+Working example:
+http://avdzjuba.temp.swtest.ru/
